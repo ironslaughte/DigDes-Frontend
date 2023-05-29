@@ -1,0 +1,26 @@
+.mysite{
+    display: flex; 
+    flex-direction: column;      
+    padding: 5px 10px;
+  }
+  .header{
+    border: 0px gray solid;	
+    text-align:center;		
+  }		
+  .content{
+    display: flex; 
+    flex-direction: row;
+          text-align: justify;		 
+          font-size: large;                	
+  }
+  .column{
+    flex: 1; 
+    border: 0px gray solid;
+  }
+  .footer{
+    border: 0px gray solid;	
+    text-align:start;			
+  }
+  .image{
+    text-align: center;
+  }
