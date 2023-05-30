@@ -1,5 +1,4 @@
 html {
-
     background-image: url(Images/background.jpg);
     
     background-repeat: no-repeat;
@@ -15,5 +14,4 @@ html {
     -o-background-size: cover;
     
     background-size: cover;
-    
-    }
+}

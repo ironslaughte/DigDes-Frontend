@@ -9,16 +9,16 @@
   }		
   .content{
     display: flex; 
+    flex-wrap: wrap;
     flex-direction: row;
           text-align: justify;		 
           font-size: large;                	
   }
   .column{
     flex: 1; 
-    border: 0px gray solid;
+    padding: 10px;
   }
   .footer{
-    border: 0px gray solid;	
     text-align:start;			
   }
   .image{
