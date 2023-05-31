@@ -1,0 +1,27 @@
+.mysite{
+    display: flex; 
+    flex-direction: column;      
+    padding: 5px 10px;
+  }
+  .header{
+    text-align:center;		
+  }		
+  .content{
+	  
+    display: flex; 
+    flex-wrap: wrap;
+    flex-direction: row;
+          text-align: justify;		 
+          font-size: large;                	
+  }
+  .column{
+    flex: 1; 
+    padding: 10px;
+  }
+  .footer{
+	margin-top: 10px;
+    text-align:start;			
+  }
+  .image{
+    text-align: center;
+  }
