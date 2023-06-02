@@ -18,6 +18,10 @@
     flex: 1; 
     padding: 10px;
   }
+  .poll{
+    flex: 1;
+    padding: 10px;
+  }
   .footer{
 	margin-top: 10px;
     text-align:start;			

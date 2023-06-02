@@ -1,24 +1,27 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang='ru'>
 <head>
-	<meta charset="utf-8">
-	<meta name="viewport" content="width=device-width">
+	<meta charset='utf-8'>
+	<meta name='viewport' content='width=device-width'>
 
 	<title>Домашнее задание №1</title>
 
-	<link rel="stylesheet" href="styles.css">
-	<link rel="stylesheet" href="background.css">
+	<link rel='stylesheet' href='styles.css'>
+	<link rel='stylesheet' href='background.css'>
 </head>
 
 <body>
-	<div class="mysite">
-	<div class="header"><h1>Мой любимый язык программирования</h1></div>
-	<div class="content">
+	<div class='mysite'>
+	<div class='header'><h1>Мой любимый язык программирования</h1></div>
+	<script crossorigin src='https://unpkg.com/react@16/umd/react.production.min.js'></script>
+	<script crossorigin src='https://unpkg.com/react-dom@16/umd/react-dom.production.min.js'></script>
+	<script src='https://cdnjs.cloudflare.com/ajax/libs/babel-standalone/6.25.0/babel.min.js'></script>		 
+	<div class='content'>
 	<!-- Определние C# -->
-		<div class="column">
+		<div class='column'>
 			<h2>Описание языка C#</h2>
 			<p>
-			C# (произносится как "си шарп") — современный объектно-ориентированный
+			C# (произносится как 'си шарп') — современный объектно-ориентированный
 			и типобезопасный язык программирования. C# позволяет разработчикам создавать 
 			разные типы безопасных и надежных приложений, выполняющихся в .NET. C# относится к 
 			 широко известному семейству языков C, и покажется хорошо знакомым любому, кто работал с C, 
@@ -26,22 +29,22 @@
 			</p>	
 			<p>Если вы хотите начать изучение данного прекрасного языка, стоит обратиться к таким ресурсам:</p>
 			<ul>
-				<li><a href="https://metanit.com/sharp/tutorial/" target="_blank">Сайт METANIT</a></li>
-				<li><a href="https://learn.microsoft.com/ru-ru/dotnet/csharp/" target="_blank">Официальная документация</a></li>
-				<li><a href="https://github.com/MoienTajik/AspNetCore-Developer-Roadmap" target="_blank">
+				<li><a href='https://metanit.com/sharp/tutorial/' target='_blank'>Сайт METANIT</a></li>
+				<li><a href='https://learn.microsoft.com/ru-ru/dotnet/csharp/' target='_blank'>Официальная документация</a></li>
+				<li><a href='https://github.com/MoienTajik/AspNetCore-Developer-Roadmap' target='_blank'>
 				Дорожная карта</a> по изучению C# и стека .Net</li>
 			</ul>
 		</div>
 		<!-- Лого C# -->
-		<div class="column">
-			<p class="image">
-				<img src="Images/Csharp_Logo.png" alt="Логотип" width="300" height="300">
+		<div class='column'>
+			<p class='image'>
+				<img src='Images/Csharp_Logo.png' alt='Логотип' width='300' height='300'>
 			</p>
 		</div>
 	</div>
-	<div class="content">
-	<!-- Интересные факты C# -->
-		<div class="column" style="position: relative; text-align: left;">
+	<div class='content'>
+		<!-- Интересные факты C# -->
+		<div class='column' style='position: relative; text-align: left;'>
 			<h2>Интересные факты о C#:</h2>
 			<ol>
 				<li>Идея создания языка C# зародилась в 1998 году и проект 
@@ -58,75 +61,82 @@
 			</ol>
 		</div>
 	</div>
-	<div class="content">
-	<!-- Опросник -->
-		<div class="column">
-			<h2>Пройдите небольшой опрос:</h2>
-			<p>Почему вы решили изучать C#?</p>
-			<form method="post" action="http://localhost/api/survey">
-			<p>
-			<input type="checkbox" name="C/C++"/> Работал раньше с C/C++
-			</p>
-			<p>
-			<input type="checkbox" name="NotLikeJava"/> Не нравится Java
-			</p>
-			<p>
-			<input type="checkbox" name="Desktop"/> Заинтересован в разработке десктопных приложений
-			</p>
-			<p>
-			<input type="checkbox" name="ForSoul"/> Для души
-			</p>
-			<p>
-			<input type="submit" value="Отправить" />
-			</p>
-			</form>
+	<div class='content'>
+		<!-- Опросник -->
+		<div class='column' id='poll'>
 		</div>
 		<!-- Забавная картинка о C# -->
-		<div class="column">
-			<h2 style="text-align: center;">Немного юмора</h2>
-			<p class="image">
-				<img src="Images/Meme.jpg" alt="Meme" width="300" height="250" >
+		<div class='column'>
+			<h2 style='text-align: center;'>Немного юмора</h2>
+			<p class='image'>
+				<img src='Images/Meme.jpg' alt='Meme' width='300' height='250' >
 			</p>
 		</div>
 	</div>  
-	<div class="content">
-		<div class="column">
-			<button id="getCurrExchangeRate">Узнать курс валют</button>
-			<div class="exchange-rate"></div>
+	<div class='content'>
+		<div class='column'>
+			<button id='getCurrExchangeRate'>Узнать курс валют</button>
+			<div class='exchange-rate'></div>
 		</div>
 	</div> 
-	<div class="footer">©Copyright 2023 by Mikhail Arkhipov. All rights reversed.</div>
+	<div class='footer'>©Copyright 2023 by Mikhail Arkhipov. All rights reversed.</div>
 </div>
-<script>
-	var requestCB = new XMLHttpRequest();
-	var responseInfo = document.querySelector(".exchange-rate");
-	var exchangeRate; 
-	document.getElementById("getCurrExchangeRate").addEventListener('click', asyncRequest);
+<script src='ExchangeRate.js'></script>
+<script type='text/babel'>
 
-	function handlerStateChange() {
-		var status = requestCB.status;				
-		if (status == 200) {
-			exchangeRate = JSON.parse(requestCB.responseText);
-			let usd = setValueExchangeRate("USD");
-			let eur = setValueExchangeRate("EUR");
-			responseInfo.innerHTML += '<p>Текущий курс доллара на сегодняшний день: <b>' + usd + '</b> рублей</p>'
-			responseInfo.innerHTML += '<p>Текущий курс евро на сегодняшний день: <b>' + eur + '</b> рублей</p>'
-		} else {
-			responseInfo.innerHTML += '<div><b>'+ requestCB.statusText + '</b></div>'
+	const answers = [{id: 'C/C++', ans: 'Работал раньше с C/C++'},{id: 'NotLikeJava', 
+	ans: 'Не нравится Java'},{id: 'Desktop', ans: 'Заинтересован в разработке десктопных приложений'},
+	{id: 'ForSoul', ans: 'Для души'}]; // варианты ответов опроса
+
+	function Poll(props)	{
+		return props.answers.map((answer, index) => 
+		<p><input className='checkbox' type='checkbox' value={answer.ans} key={answer.id}/> {answer.ans}</p>);
+	}	
+
+	function getOnItems(){
+		var checkboxes = document.getElementsByClassName('checkbox');
+		var checkboxesChecked = []; // будем хранить в списке выбранные ответы
+		let outputStr = '\n';
+		for (var index = 0; index < checkboxes.length; index++) {
+			if (checkboxes[index].checked) {
+				outputStr += checkboxes[index].value + '\n'; // положим в спиок выбранный
+			}
 		}
+		return outputStr;
 	}
 
-	function setValueExchangeRate(currencyName){
-		return new Intl.NumberFormat("ru", {maximumFractionDigits: 2}).format(exchangeRate.Valute[currencyName].Value);
-	}
-
-	function asyncRequest(){
-		requestCB.onload = handlerStateChange;		
-		responseInfo.innerHTML	= '<div></div>';	
-		requestCB.onreadystatechange = null;	
-		requestCB.open("GET", "https://www.cbr-xml-daily.ru/daily_json.js", true);
-		requestCB.send();	 
-	}
+	class ManagedPoll extends React.Component {
+		constructor(props)	{
+			super(props);
+			this.handleSubmit = this.handleSubmit.bind(this);
+		}
+		
+		handleSubmit(event)	{
+			let outputStr = getOnItems(); // получим отмеченные в опросе элементы
+			if(outputStr === '\n'){
+				alert('Очень жаль, что варианты ответа опроса не подошли вам' + 
+				'и у вас другие причины изучать C#.');
+			}
+			else{
+				alert('Вы выбрали такие ответы: ' + outputStr); // выведем выбранные элементы
+			}
+			event.preventDefault();
+		}
+		
+		render() {
+			return (
+				<div className='managed'>
+					<h2>Пройдите небольшой опрос:</h2>
+					<h3>Почему вы решили изучать C#?</h3>
+					<form onSubmit={this.handleSubmit} >
+						<Poll answers={answers} />
+						<input type='submit' value='Отправить' />								
+					</form>
+				</div>
+			);
+		}
+	}	
+	ReactDOM.render(<ManagedPoll />, document.getElementById('poll'));	 // рендер опроса
 </script>
 </body>
 </html>
